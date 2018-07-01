@@ -1,1 +1,6 @@
-<h1>Index view!!!</h1>
+<% @items.each do |item| %>
+    <h2><%= item.title%></h2>
+    <%= link_to 'View item', item_path(item) %>
+<% end %>
+
+<%= link_to 'New item', new_item_path%>
